@@ -17,9 +17,10 @@ USE Books;
 CREATE TABLE BookList (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(50),
-  author VARCHAR(3),
-  released DATE,
-  ISBN INT(13),
+  author VARCHAR(50),
+  released VARCHAR(50),
+  PAGES INT(13),
+  publisher VARCHAR(50),
   purchased BOOLEAN
 )
 
