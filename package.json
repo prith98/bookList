@@ -1,5 +1,5 @@
 {
-  "name": "hackreactor-groceries",
+  "name": "prith98-bookList",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -14,22 +14,20 @@
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
     "babel-loader": "^8.2.2",
-    "eslint": "^8.4.1",
-    "eslint-plugin-react": "^7.27.1",
     "nodemon": "^2.0.7",
-    "prettier": "^2.5.1",
     "webpack": "^4.46.0",
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "eslint": "^8.4.1",
     "express": "^4.17.1",
     "kill": "0.0.2",
     "live-server": "^1.2.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
+    "prettier": "^2.5.1",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "request": "^2.88.2"
+    "react-dom": "^16.14.0"
   }
 }
