@@ -9,16 +9,31 @@ class BookList extends React.Component {
     this.state = {
       books: []
     }
+
+    this.getBooks = this.getBooks.bind(this);
+
   }
 
+  getBooks() {
+    axios
+      .get('/apiBooks')
+      .then(({response}) => {
+        this.setState({
+          books: response
+        })
+      })
+  }
 
+  componentDidMount() {
+    this.getBooks();
+  }
 
   render() {
 
     return (
       <div>
         <img src = "books.jpeg"/>
-        <h1>Book Lists</h1>
+        <h1>Book List</h1>
         <BookSearch />
       </div>
     )

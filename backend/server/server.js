@@ -16,6 +16,7 @@ app.use(express.json());
 app.post('/apiBooks', (req, res) => {
 
   const {ISBN} = req.body;
+  console.log(req.body);
   let bookurl = `https://openlibrary.org/isbn/${ISBN}.json`;
 
   axios
@@ -33,7 +34,7 @@ app.post('/apiBooks', (req, res) => {
       })
       )
     })
-    .then(console.log('successful'))
+    .then(console.log('POST REQUEST SUCCESSFUL'))
 })
 
 app.get('/apiBooks', (req, res) => {
