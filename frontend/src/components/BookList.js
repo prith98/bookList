@@ -1,31 +1,33 @@
 import React from 'react';
 import axios from 'axios';
 import BookSearch from '/frontend/src/components/BookSearch.js';
+import Books from '/frontend/src/components/Books.js';
 
 class BookList extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      init: 'hello',
       books: []
     }
 
-    this.getBooks = this.getBooks.bind(this);
+    this.refreshBooks = this.refreshBooks.bind(this);
 
   }
 
-  getBooks() {
+  refreshBooks() {
     axios
       .get('/apiBooks')
-      .then(({response}) => {
+      .then((data) => {
         this.setState({
-          books: response
+          books: data.data
         })
       })
   }
 
   componentDidMount() {
-    this.getBooks();
+    this.refreshBooks();
   }
 
   render() {
@@ -34,7 +36,8 @@ class BookList extends React.Component {
       <div>
         <img src = "books.jpeg"/>
         <h1>Book List</h1>
-        <BookSearch />
+        <BookSearch books={this.state.books}/>
+        <Books books={this.state.books}/>
       </div>
     )
 
