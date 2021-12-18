@@ -9,7 +9,7 @@ const PORT = 3000;
 const app = express();
 const openBookURL = 'https://openlibrary.org/isbn/';
 
-app.use('/', express.static('../../frontend/dist'))
+app.use('/', express.static('frontend/dist'))
 app.use(express.json());
 
 
