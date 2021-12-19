@@ -15,7 +15,8 @@ class Books extends React.Component {
       <div>
         {this.props.books.map(oneItem => (
           <div id="book" name={oneItem.name} key={oneItem.id}>
-            <div>{oneItem.name}</div>
+            <div id="title">Book Title: {oneItem.name}</div>
+            <div id="publisher">Publisher: {oneItem.publisher}</div>
           </div>
         ))}
       </div>

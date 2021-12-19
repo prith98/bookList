@@ -9,7 +9,8 @@ class BookList extends React.Component {
     super(props);
     this.state = {
       init: 'hello',
-      books: []
+      books: [],
+      bookList: {}
     }
 
     this.refreshBooks = this.refreshBooks.bind(this);
@@ -36,7 +37,7 @@ class BookList extends React.Component {
       <div>
         <img src = "books.jpeg"/>
         <h1>Book List</h1>
-        <BookSearch books={this.state.books}/>
+        <BookSearch books={this.state.books} refresh={this.refreshBooks}/>
         <Books books={this.state.books}/>
       </div>
     )

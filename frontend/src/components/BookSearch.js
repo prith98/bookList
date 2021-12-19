@@ -30,7 +30,9 @@ class BookSearch extends React.Component {
     console.log({ISBN: this.state.ISBN});
     axios
       .post('/apiBooks', {ISBN: this.state.ISBN})
+      .then(this.props.refresh)
       .then(this.refreshState())
+
   }
 
   render() {
